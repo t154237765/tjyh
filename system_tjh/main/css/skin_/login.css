@@ -1,0 +1,32 @@
+/*css reset-uimaker.com版权所有*/
+html{*overflow:auto;}
+#container{position:relative;;background-color:#0170a4;}
+
+/*页面主体*/
+#bd{min-height:430px;}
+#main{ position:relative;width:640px; height:426px; margin:0 auto 0; background:#fff;;min-height:443px;}
+
+/*登陆框*/
+.login-box .input{position:absolute; left:78px; width:311px; height:39px;}
+.login-box .input label{height:37px; line-height:37px; font-size:14px;margin-right:30px;}
+.login-box .input input{position:absolute;  top:0; width:176px; height:39px; *line-height:39px;  padding:0 20px 0 48px; border:none; outline:none; }
+.login-box .username{ top:160px;left:0;right:0;margin:auto;}
+.login-box .username input{border:1px solid #DCDCDC;;font-size:14px; font-weight:bold;color:#33AED8;border-radius:5px;}
+.login-box .psw{ top:240px;left:0;right:0;margin:auto;}
+.login-box .psw input {border:1px solid #DCDCDC;border-radius:5px;}
+.login-box .validate{ position:relative; top:317px;}
+.login-box .validate input{width:204px; padding:0 20px 0 20px;font-size:14px;border:1px solid #DCDCDC;border-radius:5px;}
+.login-box .validate .value{ position:absolute; right:33px; top:11px; height:16px; line-height:16px; color:#fff; font-size:16px;}
+
+/*风格*/
+.styleArea{ position:absolute; left:409px; top:217px;}
+.styleArea .iselect-wrapper{top:2px;left:2px;border:none;width:105px;height:36px;line-height:36px;}
+.styleArea .iselect-wrapper .iselect{height:39px;width:133px;*top:10px;}
+.styleArea .iselect-wrapper .iselwrap-val{padding-left:10px;font-size:14px;}
+
+/*登录按钮*/
+#btn{ position:absolute;top:317px;left:0;right:0;margin:auto;text-align:center;}
+#btn input{ width:133px; height:39px; background:#0170a4; border:none; outline:none; cursor:pointer; font-size:16px; font-weight:bold;}
+
+/*页脚*/
+#ft{position:absolute;bottom:40px;left:0;right:0;height:12px;width:100%; text-align:center; line-height:12px;color:#095071;}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="renderer" content="webkit">
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<style>
+ *{
+ 	 padding:0;
+ 	 margin:0;
+ }
+ html,body{
+ 	width:100%;
+ 	height:100%;
+ }
+ div{
+	width:100%;
+ 	height:100%;
+ }
+ img{
+ 	width:100%;
+ }
+ 
+</style>
+<script src="../../assets/js/jquery.min.js"></script>
+</head>
+<body>
+<div>
+	<span id="gopay">点击支付</span>
+</div>
+	<script>   
+	
+	$("#gopay").on('click', function(){
+// 		alert(111);
+		MBS_DIRECT_PAY();
+	})
+	
+	
+	function MBS_PAYINFO(){
+		  return "MERCHANTID=105110000005266&POSID=007086664&BRANCHID=120000000&ORDERID=TJHEZ189776347885158&PAYMENT=0.10&CURCODE=01&TXCODE=520100&REMARK1=TJHEZ&REMARK2=37890&TYPE=1&GATEWAY=UnionPay&CLIENTIP=&REGINFO=&PROINFO=&REFERER=&TIMEOUT=20190213170914&MAC=9c9dd0635b6ea7eec6202866c14ac1f4";
+		}
+
+		function MBS_DIRECT_PAY(){
+			alert(111);
+			if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+				//苹果端
+				window.location="mbspay://direct?"+MBS_PAYINFO();
+			} else if (/(Android)/i.test(navigator.userAgent)) {
+			    //安卓端
+				mbspay.directpay(oos);
+			} else {
+			   //pc端
+			   alert('请到app上购买！');
+			};
+		}
+	</script>
+</body>
+</html>

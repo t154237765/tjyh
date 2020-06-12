@@ -1,0 +1,62 @@
+{
+  "name": "amazeui-switch",
+  "version": "3.3.2",
+  "description": "Amaze UI styled Bootstrap Switch. Turn checkboxes and radio buttons in toggle switches",
+  "main": "amazeui.switch.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amazeui/chosen.git"
+  },
+  "keywords": [
+    "amazeui-plugin",
+    "amaze-ui",
+    "AMUI",
+    "switch",
+    "jquery-plugin"
+  ],
+  "author": "harvesthq",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/amazeui/switch/issues"
+  },
+  "homepage": "https://github.com/amazeui/switch",
+  "licenses": [
+    {
+      "type": "Apache",
+      "url": "https://github.com/nostalgiaz/bootstrap-switch/blob/master/LICENSE"
+    }
+  ],
+  "devDependencies": {
+    "amazeui-doc-util": "latest",
+    "browser-sync": "^2.3.0",
+    "browserify": "^8.1.0",
+    "browserify-shim": "^3.8.2",
+    "del": "^1.1.1",
+    "gulp": "^3.8.10",
+    "gulp-autoprefixer": "^2.1.0",
+    "gulp-csso": "^0.2.9",
+    "gulp-gh-pages": "^0.4.0",
+    "gulp-less": "^2.0.1",
+    "gulp-load-plugins": "^0.8.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-uglify": "^1.1.0",
+    "markit-json": "^0.2.1",
+    "run-sequence": "^1.0.2",
+    "through2": "^0.6.3",
+    "vinyl-transform": "^1.0.0"
+  },
+  "dependencies": {
+    "amazeui": "^2.1.0"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "jquery": "global:jQuery"
+  }
+}

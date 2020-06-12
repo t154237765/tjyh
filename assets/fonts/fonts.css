@@ -1,0 +1,29 @@
+
+@font-face {
+    font-family: 'numberfont';
+    src: url('alert.ttf') format('truetype'),
+         url('alert.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'alertfont';
+    src: url('number.ttf') format('truetype'),
+         url('number.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'fzhzgbjt';
+    src: url('fzhzgbjt.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'fzdhjt';
+    src: url('fzdhjt.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

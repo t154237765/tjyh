@@ -1,0 +1,244 @@
+/*自定义样式* 主题色蓝#00bbd2 灰#f4f4f4 选中灰#E0E0E0*/
+.am-btn{background:#ff8160;border-color: #ff8160;border-radius:3px;}
+.am-btn:hover{background:#f07959;border-color: #f07959;border-radius:3px;}
+.am-btn-secondary:focus, .am-btn-secondary:hover,.am-active .am-btn-secondary.am-dropdown-toggle, .am-btn-secondary.am-active, .am-btn-secondary:active, .am-btn-secondary:focus, .am-btn-secondary:hover{background:#ff8160;border-color: #ff8160;border-radius:3px;    outline:none}
+.am-btn-primary:focus, .am-btn-primary:hover,.am-active .am-btn-primary.am-dropdown-toggle, .am-btn-primary.am-active, .am-btn-primary:active, .am-btn-primary:focus, .am-btn-primary:hover{background:#ff8160;border-color: #ff8160;border-radius:3px;    outline:none}
+
+.am-bor{
+    padding-left: 0rem;
+    padding-right: 0rem;
+}
+.am-modal-dialog{border:1px solid #ddd;background:#fff;}
+#new-alert .am-modal-dialog,#new-show .am-modal-dialog  {
+    border: 1px solid #ddd;
+    background: rgba(0,0,0,0.2);
+    color: #000;
+}
+
+.am-modal-dialog{border-bottom:none;}
+.am-g .am-g {margin-left:0;margin-right:0;}
+[class*=am-u-].am-padding-left-sm {
+    padding-left: 1rem;
+}
+.am-table>thead>tr>th{border-bottom:none;}
+[class*=am-icon-]{cursor: pointer;}
+/*图标*/
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot'); /* IE9*/
+  src: url('iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  margin-right: 5px;
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-bumenguanli:before { content: "\e602"; }
+.icon-llstorereservationbtn:before { content: "\e609"; }
+.icon-dianzan:before { content: "\e60a"; }
+.icon-yemiandingyi:before { content: "\e60b"; }
+.icon-yuyueguanli:before { content: "\e60c"; }
+.icon-renyuanxiaozu:before { content: "\e604"; }
+.icon-zhuce:before { content: "\e60d"; }
+.icon-kehuxinxichaxun:before { content: "\e60e"; }
+.icon-zbactivity:before { content: "\e600"; }
+.icon-activity:before { content: "\e601"; }
+.icon-caidanmulu:before { content: "\e605"; }
+.icon-iconrenyuan:before { content: "\e606"; }
+.icon-gongsi:before { content: "\e603"; }
+.icon-gangweiguanli:before { content: "\e607"; }
+.icon-tuwentuisong:before { content: "\e60f"; }
+.icon-yingxiaogongju:before { content: "\e610"; }
+.icon-jiaoseguanli-copy:before { content: "\e608"; }
+.icon-icondazhuanpan:before { content: "\e611"; }
+.icon-iconfontanquan:before { content: "\e612"; }
+.icon-wodefensi:before { content: "\e613"; }
+.icon-weixinzidingyicaidan:before { content: "\e614"; }
+
+form label{color: #2481d8;}
+.am-text-primary{color:#00bbd2}
+#admin-offcanvas .iconfont,#admin-offcanvas .am-icon-home{font-size: 20px;}
+
+/*自适应*/
+@media only screen and (min-width: 641px) {
+html{min-width: 1100px;}
+.c-main-wrapper{min-width: 1040px;width:auto !important;width:1040px;position:inherit;}
+.c-main-wrapper .admin-sidebar{height:100%;position: absolute;top:0px;left:0px;background:#f4f4f4;padding-top:55px;z-index:10;}
+.c-main-wrapper .admin-sidebar,.c-main-wrapper .admin-sidebar .admin-offcanvas-bar{width:155px;/*min-height:800px;height:auto !important;height:800px;*/}
+.c-main-wrapper .admin-sidebar .admin-offcanvas-bar{background: #f4f4f4;}
+#topbar-collapse{padding-left:220px;height: 50px;line-height: 50px;margin-right:0px;}
+#topbar-collapse .am-nav li{padding-right:16px;}
+.c-main-wrapper .admin-content{padding-left: 210px;padding-right:30px;}
+.c-main-wrapper .am-padding-sm{padding-left: 40px;padding-right:30px;}
+.c-main-wrapper .admin-header{z-index: 90;}
+.c-main-wrapper .am-list li:hover{background:#E0E0E0}
+.c-main-wrapper .am-list li.selected{background:#E0E0E0}
+.c-main-wrapper .am-breadcrumb{padding:14px 0 0 0;}
+.c-main-wrapper .am-topbar-brand{padding-left: 9px;}
+}
+@media only screen and (max-width: 640px) {
+.c-main-wrapper .am-breadcrumb,.c-main-wrapper .admin-content .am-title,.c-main-wrapper .am-topbar-brand{padding-left:20px;}
+}
+/*系统主界面*/
+.c-main-wrapper .am-topbar{background-color:#00bbd2;}
+.c-main-wrapper .am-topbar-brand,.c-main-wrapper .am-topbar, .am-topbar a{color:#fff;border-width:0}
+.c-main-wrapper .admin-main{background: #fff;}
+.c-main-wrapper .am-list li{background: #f4f4f4;border:none;margin-bottom:8px;}
+.c-main-wrapper .am-list li.am-nav-divider{border:none;border-top: 1px solid #dedede;box-shadow: none;}
+#admin-offcanvas .am-nav-divider{margin: 0px 0.5em 20px!important;}
+#topbar-collapse{background-color:#00bbd2;}
+#topbar-collapse .am-nav{width:100%;}
+#topbar-collapse .am-nav div{padding:0;}
+#topbar-collapse .am-nav .fl-r{float:right;text-align: right;}
+#topbar-collapse .am-nav li{display: inline-block;display: inline-block!important;}
+.admin-content .am-breadcrumb a{color:#aaa;}
+.c-main-wrapper .admin-content .am-panel{border-top:0;}
+
+
+.material_form {
+    overflow: hidden;
+    zoom: 1;
+    margin: 20px 0;
+}
+.material_form .preview_area {
+    float: left;
+    width: 308px;
+    border: 1px solid #ddd;
+}
+.material_form .preview_area .edit_item {
+    position: relative;
+}
+.appmsg_item {
+    padding: 15px;
+}
+.appmsg_item .time {
+    color: #888;
+    font-size: 12px;
+}
+.appmsg_item .main_img {
+    margin: 10px 0;
+    height: 150px;
+    position: relative;
+    overflow: hidden;
+}
+.appmsg_item .main_img img {
+    width: 100%;
+    min-height: 150px;
+}
+img {
+    max-width: 100%;
+}
+.appmsg_item .main_img h6 {
+    position: absolute;
+    background: RGBA(0,0,0,.5);
+    color: #fff;
+    padding: 3px 5px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    font-size: 14px;
+}
+.appmsg_item h6 {
+    font-size: 16px;
+    color: #222;
+    font-weight: normal;
+    text-align: center;
+    line-height: 20px;
+    margin-top: 0;
+    text-align: left;
+}
+.appmsg_item .intro {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+/*input,*/ textarea, .uneditable-input {
+    width: 206px;
+}
+.hover_area {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: RGBA(0,0,0,.4);
+    z-index: 100;
+    text-align: center;
+    padding-top: 100px;
+    display: none;
+}
+.edit_item .hover_area a {
+    color: #fff;
+    border: 1px solid #eee;
+    padding: 3px 5px;
+    margin: 10px 10px;
+}
+.appmsg_edit_action {
+    padding: 15px;
+    border-top: 1px solid #ddd;
+}
+.appmsg_edit_action a {
+    border: 2px dashed #ddd;
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    display: block;
+}
+
+
+
+.pic-msg .c-right-block{
+	padding-top: 20px;margin-top: 20px;border:1px solid #ddd;
+}
+.tab-content .in {
+    display: block;
+    float: left;
+}
+.tab-content .tab-pane {
+    display: none;
+}
+ol, ul {
+    list-style: none;
+}
+.form-horizontal .item-label {
+    display: block;
+    margin-right: 5px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+}
+.need_flag {
+    color: #F00;
+    vertical-align: -6px;
+    font-size: 20px;
+}
+.form-horizontal .item-label .check-tips {
+    margin-left: 8px;
+    color: #aaa;
+    font-weight: normal;
+}
+.form-horizontal .controls {
+    overflow: hidden;
+    padding: 5px 5px 5px 0;
+    margin-left: 0px;
+}
+.input-large {
+    width: 390px;
+}
+.material_form .edit_area .area_arrow {
+    position: absolute;
+    top: 60px;
+    left: -30px;
+    width: 30px;
+    height: 30px;
+    background: url(../i/area_arrow.png) no-repeat;
+    z-index: 100;
+}

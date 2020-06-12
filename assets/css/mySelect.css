@@ -1,0 +1,109 @@
+*{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+
+}
+.header{
+	width:7.1rem;
+	position:fixed;
+	top: 0;
+	height:0.88rem;
+	padding: 0 0.2rem;
+	background:#09b6f2;
+	text-align: center;
+	line-height: 0.88rem;
+	display: flex;
+	align-items:center;
+}
+.Hui-iconfont-slider-left{
+	font-size: 0.4rem;
+	color: #fff;
+}
+.header .left{
+	display:flex;
+	align-items: center;
+	width: 25%;
+	font-size:0.30rem;
+	color: #fff;
+}
+.header .middle{
+	width: 50%;
+	font-size: 0.36rem;
+	color: #fff;
+}
+.container{
+	width:6.6rem;
+	height:fit-content;
+	padding:0 0.45rem;
+	font-size: 0.3rem;
+	color: #fff;
+	background:url(../images/wcup/bottom.jpg) no-repeat 100% 100%;
+	background-size: 100% 100%;
+}
+.top{
+	width:100%;
+	height:1.9rem;
+	background:url(../images/wcup/top_02.jpg) no-repeat 100% 100%;
+	background-size: 100% 100%;
+	padding-top:5.4rem;
+	margin-top:0.88rem;
+}
+.bottom{
+	width:100%;
+	height:6rem;
+	background:url(../images/wcup/bottom.jpg) no-repeat 100% 100%;
+	background-size: 100% 100%;
+}
+.success{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  font-size: 0.36rem;
+  color: #fff;
+  padding-top:1.2rem;
+}
+.success img{
+  margin-right: 0.2rem;
+}
+.success span{
+  color:#FCF138;
+}
+.container>p{
+  font-size: 0.24rem;
+  color:#fff;
+  margin-top: 0.2rem;
+}
+ul>p{
+  padding-top: 0.2rem;
+}
+ul {
+  width: 100%;
+}
+li{
+  width: 100%;
+  display: flex;
+  background-color: #009947;
+  align-items: center;
+  justify-content:space-between;
+  text-align:center;
+  border-radius:0.1rem;
+  border:0.05rem solid #fff;
+  padding:0.2rem 0rem;
+  font-size: 0.3rem;
+  color:#fff;
+  margin-top: 0.2rem;
+}
+li div{
+  width: 48%;
+}
+.right{
+  border-left:0.01rem solid #fff;
+}
+li p{
+  margin: 0.05rem;
+}

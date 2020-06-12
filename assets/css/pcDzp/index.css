@@ -1,0 +1,412 @@
+* {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	outline:none;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	background:#2D7EF4;
+}
+::-webkit-scrollbar{
+ 
+   display:none;
+ 
+}
+
+.Top {
+	width: 100%;
+    display: -webkit-flex;
+	display: flex;
+	
+}
+
+.content {
+	position: relative;
+}
+
+.wheel {
+	position: absolute;
+	left: 360px;
+}
+
+#wheelCanvas {
+	width: 94%;
+	height:94%;
+	margin: 0 auto;
+	position: absolute;
+	top: 3%;
+	left: 0;
+	bottom:0;
+	right:0;
+}
+.content .wheel .pointer{
+    position:absolute;
+    width:128px;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    margin:auto;
+}
+.rule{
+	position:absolute;
+	left:55%;
+	width:498px;
+	padding-left:10px;
+	padding-right:10px;
+	height:430px;
+	padding-bottom:20px;
+	padding-top:40px;
+	margin-top:45px;
+	background:#fff;
+	border-radius:10px;
+}
+.ruleTitle{
+	width:229px;
+	height:60px;
+	border-radius:5px;
+	font-size:22px;
+	color:#fff;
+	text-align:center;
+	line-height:60px;
+	background:#F9612C;
+	font-family:FZPWJT;
+	margin:auto;
+	margin-top:-75px;
+}
+.exchangeTitle{
+	width:229px;
+	height:60px;
+	border-radius:5px;
+	font-size:22px;
+	color:#fff;
+	text-align:center;
+	line-height:60px;
+	background:#F9612C;
+	font-family:FZPWJT;
+	margin:auto;
+	position:absolute;
+	top:-30px;
+	left:0;
+	right:0;
+	}
+.ruleCont{
+	width:100%;
+	height:100%;
+	overflow:auto;
+	color:#fd4c22;
+	font-family:FZHTJT;
+}
+.drawNum{
+	font-size:24px;
+	font-family:"FZHei-B01S";
+	color:#fff;
+	text-align:center;
+	position:absolute;
+	left:0;
+	right:0;
+	margin:auto;
+	bottom:-40px;
+}
+.drawNum span{
+	color:#FF573B;
+}
+.exchange{
+	width:1200px;
+	height:285px;
+	margin:auto;
+	margin-top:530px;
+	text-align:center;
+	position:relative;
+}
+.exchangeCont{
+	width:1200px;
+	height:255px;
+	background:#fff;
+	border-radius:10px;
+}
+.exchangeNum{
+	color:#457eff;
+	font-size:18px;
+	font-family:"FZHei-B01S";
+	padding-top:40px;
+}
+.exchangeNum span{
+	color:#fa453e;
+	font-size:24px;
+	font-family:"FZHei-B01S";
+	
+}
+.exRecord{
+	font-family:"FZHei-B01S";
+	position:absolute;
+	width:144px;
+	height:47px;
+	text-align:center;
+	line-height:47px;
+	background:#2d7df4;
+	font-size:24px;
+	color:#fff;
+	border-radius:5px;
+	top:20px;
+	right:35px;
+}
+.exchangeCont ul{
+	display:flex;
+    display: -webkit-flex;
+	align-items:center;
+	align-items:center;
+	-webkit-align-items:center;	
+	-webkit-justify-content:space-around;
+	justify-content:space-around;
+	margin-top:15px;
+}
+.exchangeCont ul li{
+	display:flex;
+	display: -webkit-flex;
+	align-items:center;
+	-webkit-align-items:center;		
+	justify-content:flex-end;
+	-webkit-justify-content:flex-end;
+	
+}
+.exchangeCont ul p{
+	font-size:18px;
+	color:#d11c15;
+	background:#FFF6D9;
+	width:94px;
+	height:30px;
+	font-family:"FZDaHei-B02S";
+	border-radius:5px;
+	text-align:center;
+	line-height:30px;
+	display:inline-block;
+	margin-right:18px;
+}
+.bindPhone , .win_body , .tishi_body , .prizeList_body , .exchangeList_body{
+	width:100%;
+	height:100%;
+	background:rgba(0,0,0,0.4);
+	position:fixed;
+	top:0;
+}
+.alert-body , .prizeList_box , .exchangeList_box{
+	width:500px;
+	height:320px;
+	border-radius:5px;
+	background:#fff;
+	position:absolute;
+	top:250px;
+	left:0;
+	right:0;
+	margin:auto;
+	font-family:方正黑体简体;
+}
+.bpInput , .bpCodeIpt{
+	width:80%;
+	margin:auto;
+	text-align:center;
+	display:-webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+	display:flex;
+	align-items:center;
+	font-size:24px;
+	border-bottom:1px solid #DCDCDC;
+	margin-bottom:30px;
+}
+#phone{
+	width:60%;
+	border:0;
+	height:30px;
+	font-size:16px;
+}
+#testcode{
+	width:40%;
+	border:0;
+	height:30px;
+	font-size:16px;
+}
+#bpcodebtn{
+	width:28%;
+	height:32px;
+	text-align:center;
+	line-height:32px;
+	border-radius:5px;
+	font-size:18px;
+	color:#fff;
+	border:0;
+	background:#959595;
+}
+.btnpos{
+	text-align:center;
+	
+}
+.alert_close{
+	width:200px;
+	height:45px;
+	font-size:22px;
+	text-align:center;
+	line-height:40px;
+	color:#fff;
+	border-radius:45px;
+	background:#2F79F4;
+	border:0;
+	margin-top:10px;
+	letter-spacing:3px;
+}
+.c-close-a{
+	width:40px;
+	position:absolute;
+	top:-20px;
+	right:-15px;
+}
+.c-close-a img{
+	width:100%;
+}
+.win_box , .tishi_box{
+	width:500px;
+	height:320px;
+	border-radius:5px;
+	background:#fff;
+	position:absolute;
+	top:250px;
+	left:0;
+	right:0;
+	margin:auto;
+	font-family:方正黑体简体;
+}
+.close{
+	width:40px;
+	position:absolute;
+	top:-20px;
+	right:-15px;
+}
+.close img{
+	width:100%;
+	
+}
+.win_cont{
+	width:80%;
+	padding:0% 10%;
+	text-align:center;
+    display: -webkit-flex;
+	display:flex;
+	align-items:center;
+	-webkit-justify-content:center;
+	align-items:center;
+	-webkit-align-items:center;	
+	justify-content:center;
+	font-size:22px;
+	margin-top:5%;
+}
+.tishi_cont{
+	width:80%;
+	padding:0% 10%;
+	text-align:center;
+    display: -webkit-flex;
+	display:flex;
+	align-items:center;
+	-webkit-align-items:center;
+	-webkit-justify-content:center;
+	justify-content:center;
+	align-items:center;
+	justify-content:center;
+	font-size:22px;
+	margin-top:18%;
+}
+.btn , .tishiBtn , .prizeListBtn , .exchangeList_body{
+	text-align:center;
+}
+.btn button , .tishiBtn button{
+	width:200px;
+	height:45px;
+	font-size:22px;
+	text-align:center;
+	line-height:40px;
+	color:#fff;
+	border-radius:45px;
+	background:#2F79F4;
+	border:0;
+	margin-top:10px;
+	letter-spacing:3px;
+	position:absolute;
+	bottom:50px;
+	left:0;
+	right:0;
+	margin:auto;
+}
+.prizeListBtn button , .exchangeListBtn button{
+	width:200px;
+	height:45px;
+	font-size:22px;
+	text-align:center;
+	line-height:40px;
+	color:#fff;
+	border-radius:45px;
+	background:#2F79F4;
+	border:0;
+	margin-top:10px;
+	letter-spacing:3px;
+	position:absolute;
+	bottom:30px;
+	left:0;
+	right:0;
+	margin:auto;
+}
+.prizeList_title , .exchangeList_title{
+	width:100%;
+    display: -webkit-flex;
+	display:flex;
+	align-items:center;
+	-webkit-align-items:center;
+	-webkit-justify-content:space-around;
+	justify-content:space-around;
+	color:#2f79f4;
+	font-size:20px;
+}
+.exchangeList_title p{
+	width:33%;
+	text-align:center;
+}
+
+.prizeList_cont ul , .exchangeList_cont ul{
+	width:100%;
+	height:40%;
+	overflow:scroll;
+}
+.prizeList_cont ul li , .exchangeList_cont ul li{
+	width:100%;
+    display: -webkit-flex;
+	display:flex;
+	align-items:center;
+	-webkit-align-items:center;
+	justify-content:space-around;
+	-webkit-justify-content:space-around;
+	
+	color:#333;
+	font-size:20px;
+}
+.prizeList_cont ul li p{
+	width:50%;
+	text-align:center;
+}
+.exchangeList_cont ul li p{
+	width:33%;
+	text-align:center;
+}
+.prizeImg{
+	width:92px;
+	margin:auto;
+}
+.prizeImg img{
+	width:100%;
+}
+
+
+
+

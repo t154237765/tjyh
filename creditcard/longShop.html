@@ -1,0 +1,431 @@
+<!-- <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ include file="/jsp/common/pub.jsp"%> -->
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>龙卡有礼话费给你</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <link rel="stylesheet" href="../assets/css/weui.min.css" />
+  	<style type="text/css">
+        *{
+        	padding:0;
+        	margin:0;
+        	list-style:none;
+        }
+        html,body{
+        	width:100%;
+        	height:100%;
+        	height:16.89rem;
+        	background:#80C7FD;
+        }
+        .box{
+        	background:url(../assets/images/card/background.jpg) no-repeat 100% 100%;
+        	background-size:100% 95%;
+        	height:16.89rem;
+        	position:relative;
+        }
+        .titleBar{width:90%;padding:0% 5%;height:0.88rem;z-index:11;font-size:0.3rem;color:#fff;display:flex;align-items:center;text-align:center;background:#08B6F2;position:fixed;top:0;}
+        .titleBar-back{display:flex;align-items:center;width:25%;}
+        .titleBar-text{width:50%;text-align:center;font-size:0.36rem;}
+        .titleBar-back img{width:0.16rem;}
+        .task{width:65%;margin:auto;background:#0D5ACD;font-size:0.3rem;position:absolute;top:3rem;left:0;right:0;text-align:center;color:#fff;padding:1% 0%;}
+		.activeStart{background:linear-gradient(#f6c95f, #f3af43);width:80%;height:0.8rem;line-height:0.8rem;font-size:0.36rem;color:#fff;position:absolute;top:8rem;left:0;right:0;text-align:center;margin:auto;border-radius:0.2rem;font-weight:bold;border-top: .05rem solid #fff;}   
+		.activeRule{width:86%;height:6.8rem;position:absolute;top:10rem;background:#E9F6FE;border-radius:0.5rem;margin:auto;left:0;right:0;padding:0% 2%;overflow:auto;padding-bottom:2%;font-weight:bold;}
+		.activeStart p{font-weight: bold;}
+		.title{text-align:center;font-size:0.36rem;color:#355e3b;font-weight:bold;margin-top:0.36rem;margin-bottom:0.1rem;}
+		.activeRule div p{color:#355e3b;}
+		.activeRule div{font-size:0.3rem;}
+		.activeRule::-webkit-scrollbar{
+		    display: none;
+		}
+		/* 继续支付样式  */
+		.payTime{position:absolute;width:100%;}
+		.payTime .times{width:6.6rem;background:#DDEDFF;height:2.5rem;position:absolute;top:7.5rem;left:0;right:0;margin:auto;border-radius:0.2rem;font-size:0.24rem;color:#333;text-align:center;}
+		.payTime .times ul{width:100%;display:flex;align-items:center;justify-content:center;margin-top:6%;margin-bottom:4%;}
+		.payTime .times .dot{width:0.45rem;height:0.45rem;background:linear-gradient(#726D6C, #C9BFBF);border-radius:0.45rem;border:0.1rem solid #fff;text-align:center;line-height:0.45rem;font-weight:600;font-size:0.3rem;color:#fff;}
+		.payTime .times .wire{width:0.6rem;height:0.1rem;background:#fff;}
+		.payTime .on{background:linear-gradient(#FE5449, #FD8985) !important;}
+		.payTime .cBtn{background:linear-gradient(#FFA29F, #EE6660);width:80%;height:0.8rem;line-height:0.8rem;font-size:0.36rem;color:#fff;position:absolute;top:10.5rem;left:0;right:0;text-align:center;margin:auto;border-radius:0.5rem;font-weight:bold;}   
+		.payTime .tel{margin-bottom:2%;}
+		
+		.paySuccess{position:absolute;width:100%;display:none;}
+		.paySuccess .times{width:6.6rem;background:#DDEDFF;height:2.5rem;position:absolute;top:8rem;left:0;right:0;margin:auto;border-radius:0.2rem;font-size:0.24rem;color:#333;text-align:center;}
+		.paySuccess .times ul{width:100%;display:flex;align-items:center;justify-content:center;margin-top:4%;margin-bottom:3%;}
+		.paySuccess .times .dot{width:0.45rem;height:0.45rem;background:linear-gradient(#726D6C, #C9BFBF);border-radius:0.45rem;border:0.1rem solid #fff;text-align:center;line-height:0.45rem;font-weight:600;font-size:0.3rem;color:#fff;}
+		.paySuccess .times .wire{width:0.6rem;height:0.1rem;background:#fff;}
+		.paySuccess .on{background:linear-gradient(#FE5449, #FD8985) !important;}
+		.paySuccess .successBtn{background:linear-gradient(#E1DDDC, #8A8A8A);width:80%;height:0.8rem;line-height:0.8rem;font-size:0.36rem;color:#fff;position:absolute;top:11rem;left:0;right:0;text-align:center;margin:auto;border-radius:0.5rem;font-weight:bold;}   
+		
+		
+		/*登陆弹出框*/
+		.weui-dialog .weui-dialog__btn_primary {
+			background: #1abfff;
+			width: 5rem;
+			margin: 0 auto;
+			height: 1.8rem;
+			color: #fff;
+			border-radius: 5px;
+			margin-bottom: 1rem;
+			line-height: 1.8rem;
+			font-size: .8rem;
+		}
+		
+		#iosDialog1 .weui-cell {
+			padding: 0;
+		}
+		
+		#iosDialog1 .weui-cell__bd {
+			background: #eee;
+			padding: 0.2rem 0 0.2rem 0.1rem;
+			font-size: .7rem;
+		}
+		
+		#iosDialog1 .weui-vcode-btn {
+			border: 0;
+			background: #aaa;
+			color: #fff;
+			font-size:0.3rem;
+			border-radius: 3px;
+			height:0.8rem;
+			line-height: 0.8rem;
+		}
+		
+		#iosDialog1 .weui-cell_vcode {
+			margin-top:0.2rem;
+		}
+		
+		#iosDialog1 .weui-cell_vcode:before,#iosDialog1 .weui-cells_form:after {
+			border: 0
+		}
+		
+		#iosDialog1 button.c-c-b {
+			background: #08B6F2;
+		}
+		
+		.js_dialog input.weui-input {
+			color: #333;
+			font-size:0.3rem;
+		}
+		
+		.buyNote {
+			float: right;
+			margin-right: 15px;
+		}
+		
+		.weui-tab {
+			height: auto;
+		}
+		
+		.weui-dialog {
+			overflow: visible;
+		}
+		
+		#c-login-close,#c-login-close2,#c-zhifu-close{
+			position: absolute;
+			top:-0.7rem;
+			right:0rem;
+			font-size:0.6rem;
+			color: #fff;
+		}
+		
+		#c-intro-wrapper {
+			padding: 0 5px;
+		}
+		
+		.weui-cells:before,.weui-cells:after {
+			border: 0;
+		}
+		.weui-toast__content{
+			font-size:0.36rem;
+		}
+		/* 弹出框美化 */
+		.weui-skin_android .weui-dialog__bd:first-child{text-align: center;}
+		.weui-skin_android .weui-dialog__ft{text-align: center;padding: 0 1.8em .7em 1.4em;}
+		.weui-skin_android .weui-dialog__btn:last-child{line-height: 1.5rem;width: 4rem;height: 1.5rem;}
+		.c-panel-image{margin:0 auto;}
+
+		.pull-up , .zhezhao , .err-div{width:100%;height:100%;position:fixed;top:0;background:rgba(0,0,0,0.4);z-index:33333;}
+		.pull-up .cont{width:80%;background:#fff;margin:auto;margin-top:4.4rem;border-radius:0.2rem;padding-bottom:0.6rem;}
+		.zhezhao .cont{width:80%;background:#fff;margin:auto;margin-top:4.4rem;border-radius:0.2rem;}
+		.err-div .cont{width:80%;background:#fff;margin:auto;margin-top:4.4rem;border-radius:0.2rem;padding-bottom:0.5rem;}
+		.pull-up .tishi{font-size:0.36rem;width:90%;text-align:center;padding:0% 5%;}
+		.zhezhao .zhezhao-tishi{font-size:0.36rem;width:90%;text-align:center;padding:0% 5%;}
+		.err-div .err-tishi{font-size:0.36rem;width:90%;text-align:center;padding:0% 5%;}
+		.tishi p{padding:16% 0%;}
+		.err-tishi p{padding:16% 0%;}
+		.zhezhao-tishi p{padding:16% 0%;}
+		.confirm1{width:3rem;height:0.8rem;line-height:0.8rem;border-radius:0.5rem;text-align:center;font-size:0.36rem;border:1px solid #08B6F2;color:#08B6F2;margin:auto;}
+		.button{display:flex;align-items:center;justify-content:space-around;text-align:center;}
+		.confirm2 , .cancel{font-size:0.36rem;width:50%;padding:5% 0%;border-top:1px solid #ccc;}
+		.confirm2{border-left:1px solid #ccc;color:#08B6F2;}
+</style>
+</head>
+<body>
+    <div class="box">
+    	<div class="titleBar" >
+		     <div class="titleBar-back" onclick="toHome()">
+		         <img src="${stax}/assets/images/history.png" />&nbsp;返回
+		     </div>
+			<div class="titleBar-text am-text-truncate">龙卡有礼话费给你</div>
+		</div>
+		<div class="activeStart">
+			<p>参与活动</p>
+		</div>
+		
+		<!-- 支付次数 -->
+		<div class="payTime" style="display:none;">
+			<div class="times">
+				<ul>
+					<li class="dot on">0</li>
+					<li class="wire"></li>
+					<li class="dot">1</li>
+					<li class="wire"></li>
+					<li class="dot">2</li>
+					<li class="wire"></li>
+					<li class="dot">3</li>
+					<li class="wire"></li>
+					<li class="dot">4</li>
+				</ul>
+				<p class="tel">充值号码：<span class="chargePhone">${userphone}</span></p>
+				<p>还差<span class="buytime">3笔</span>，就差<span class="buytime">3笔</span>，<span>您的20元话费</span>还在等您</p>
+			</div>
+			<div class="cBtn">继续支付</div>
+		</div>
+		
+		<!--支付完成  -->
+		<div class="paySuccess" style="display:none;">
+			<div class="times">
+				<ul>
+					<li class="dot on">0</li>
+					<li class="wire"></li>
+					<li class="dot on">1</li>
+					<li class="wire"></li>
+					<li class="dot on">2</li>
+					<li class="wire"></li>
+					<li class="dot on">3</li>
+					<li class="wire"></li>
+					<li class="dot on">4</li>
+				</ul>
+				<p class="tel">充值号码：<span class="chargePhone">${userphone}</span></p>
+				
+				<p>恭喜您，已完成<span style="color:red;">4笔</span>交易，<span style="color:red;">20元</span>话费将在24小时之内到账<br>敬请关注天津惠其他精彩活动</p>
+			</div>
+			<div class="successBtn">恭喜您，已完成四笔支付</div>
+		</div>
+		
+		<div class="activeRule">
+			<p class="title">活动规则</p>
+			<div>
+				<p style="color:red;">温馨提示：携号转网手机号可能存在无法正常充值的情况，给您造成的不便敬请谅解。</p>
+				<p>1. 本活动仅限建行天津特邀用户参加； </p>
+				<p>2.参与活动请使用手机银行签约号码进行登录验证；</p>
+				<p>3.本活动提供移动、联通、电信手机号段的快速充值；</p>
+				<p>4.根据活动提示完成指定支付交易后，系统自动提交充值申请完成充值，话费即时到账；</p>
+				<p style="color:red;">5.参与活动过程中，如提示：“您本期活动参与次数已用完”，若成功支付次数未满4次，稍后几分钟再过来继续支付即可； </p>
+				<p>6.月初或月末充值量较大，话费到账时间可能会出现延迟，请耐心等待；</p>
+				<p>7.请仔细核对充值手机号码，交易无法取消或修改，已充值话费无法退回或转存其他号码；</p>
+				<p>8.本活动解释权归建行天津分行所有；</p>
+				<p>9.如有疑问请咨询客户服务热线400-810-9200。</p>
+			</div>
+		</div>
+    </div>
+    
+	<!--提示框  -->
+	<div class="pull-up" style="display:none;">
+		<div class="cont">
+			<i class="weui-icon-cancel" style="color: #fff; font-size: 1.2rem;margin-bottom:0.1rem;position:absolute;top:3.8rem;font-size:0.6rem;right:0.5rem"></i>
+			<div class="tishi">
+				<p>该手机号已绑定其他建行账户</p>
+			</div>
+			<div class="confirm1">确定</div>
+		</div>
+	</div>
+	
+	<!--错误提示框  -->
+	<div class="err-div" style="display:none;">
+		<div class="cont">
+			<i class="weui-icon-cancel" style="color: #fff; font-size: 1.2rem;margin-bottom:0.1rem;position:absolute;top:3.8rem;font-size:0.6rem;right:0.5rem"></i>
+			<div class="err-tishi">
+				<p class="err-title"></p>
+			</div>
+			<div class="confirm1">确定</div>
+		</div>
+	</div>
+	
+	<!-- 确定支付 -->
+	<div class="zhezhao" style="display:none;">
+		<div class="cont">
+			<div class="zhezhao-tishi">
+				<p>亲，您确认要支付0.01元参与本活动吗？</p>
+			</div>
+			<div class="button">
+				<div class="cancel">取消</div>
+				<div class="confirm2">确定</div>
+			</div>
+		</div>
+	</div>
+	
+    
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/weui.min.js"></script>
+<script src="../assets/js/rem.js"></script>
+<script>
+	var buytimes = "${buytimes}";//购买成功几笔
+	var userphone = "${userphone}";
+	var userId = localStorage.getItem("userId");
+	var bankId = localStorage.getItem("bankId");
+	var detailId = "${detailId}";
+	var pid ="${pid}";
+	var rmoney = "${rmoney}";
+	var successtime = "${successtime}";//订单有几笔
+	$(function(){
+			if(buytimes == 0){
+	   		$(".activeStart").show();//参与活动
+	   		$(".payTime").hide();//继续支付
+	   		$(".paySuccess").hide();//充值成功
+	   	}else if(buytimes > 0 && buytimes < 4){
+	   		$(".activeRule").css("top","12rem");
+	   		$(".activeStart").hide();//参与活动
+	   		$(".payTime").show();//继续支付
+	   		$(".paySuccess").hide();//充值成功
+	   		buytime();
+	   	}else if(buytimes == 4){
+	   		$(".activeRule").css("top","12rem");
+	   		$(".activeStart").hide();//参与活动
+	   		$(".payTime").hide();//继续支付
+	   		$(".paySuccess").show();//充值成功
+	   	}
+	});
+	
+/***********************************************************参与活动***********************************************************/
+    	
+    	$(".activeStart").bind("click",function(){
+    		$.ajax({
+    			url:'../huituan/findusertimes.json',
+    			type:'get',
+    			data:'uid='+encodeURIComponent(userId)+"&did="+detailId,
+    			success:function(resp){
+    				if(resp.msg){
+    					console.log(resp.msg);
+    					weui.alert(resp.msg);
+    				}else{
+        				successtime = resp.successtime;
+        				if(successtime == 4){
+        					$(".err-div .err-title").html("亲，您本期活动参与次数已用完!")
+        	    			$(".err-div").show();
+        	    		}else{
+        	    			$(".zhezhao").show();
+        	    		}
+    				}
+    			}
+    		});
+    	});
+    	
+/***********************************************************继续去支付***********************************************************/
+    	$(".cBtn").bind("click",function(){
+    		$.ajax({
+    			url:'../huituan/findusertimes.json',
+    			type:'get',
+    			data:'uid='+encodeURIComponent(userId)+"&did="+detailId,
+    			success:function(resp){
+    				if(resp.msg){
+    					weui.alert(resp.msg);
+    				}else{
+        				successtime = resp.successtime;
+        				if(successtime == 4){
+        					$(".err-div .err-title").html("亲，您本期活动参与次数已用完!")
+        	    			$(".err-div").show();
+        	    		}else{
+        	    			$(".zhezhao").show();
+        	    		}
+    				}
+    			}
+    		});
+    	});
+    	
+/***************************************************************************************************************************/
+     	var oos = "";
+    	/**支付**/
+        function pay(){
+        	$.ajax({
+    			type: "POST",
+    			url: "../huituan/buy.json",
+    			data:"detailId="+detailId+"&pid="+pid+"&userId="+encodeURIComponent(userId)+"&bankId="+encodeURIComponent(bankId)+"&payMoney="+rmoney+"&bflag=1"+"&type=1"+"&r="+Math.random(),
+   				success: function(resp){
+   					$(".zhezhao").hide();
+	   				if(resp.errMsg){
+	   					$(".err-div .err-title").html(resp.errMsg);
+	   					$(".err-div").show();
+	   				}else if(resp.payUrl){
+	   					oos = resp.payUrl;
+	   					MBS_DIRECT_PAY();
+	   				}
+    			},
+    			error:function(er){
+    				console.log(er);
+    			}
+        	});
+        }
+    	
+    	 $(".bgblack a").click(function(){
+    		$(".bgblack").hide();
+    	})
+    	
+   	function MBS_PAYINFO(){
+	  return oos;
+	}
+
+	function MBS_DIRECT_PAY(){
+		if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+			//苹果端
+			window.location="mbspay://direct?"+MBS_PAYINFO();
+		} else if (/(Android)/i.test(navigator.userAgent)) {
+		    //安卓端
+			mbspay.directpay(oos);
+		} else {
+		   //pc端
+		   alert('请到app上购买！');
+		};
+	}
+	
+	/***********************************************************通用***********************************************************/
+	
+	$(".confirm2").click(function(){
+		pay();
+	});
+	$(".cancel").click(function(){
+		$(".zhezhao").hide();
+	});
+        	   				
+        	   				
+   	//格式化用户剩余购买次数
+   	function buytime(){
+   		var time = parseInt(4-buytimes);
+   		buytimes = parseInt(buytimes)+1;
+   		$(".buytime").html(time+"次");
+   		$(".dot:lt("+buytimes+")").addClass("on");
+   	}
+	
+	$("#c-login-close").on("click",function(){
+		$("#iosDialog1").hide();
+	});
+	$(".pull-up i , .confirm1").on("click",function(){
+		$(".pull-up").hide();
+	});
+	$(".err-div i , .err-div .confirm1").on("click",function(){
+		$(".err-div").hide();
+	});
+	
+	function toHome(){
+ 		var loading = weui.loading('正在加载...');	//loading
+ 		window.location.href = "../huituan/index.do";
+ 	}
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+.prize-panel{height: 300px;overflow-y: scroll;}
+#province {padding: 4px;}
+#takeType {padding: 4px;line-height:1.8;}
+.uploadFile {display: none;}
+.uploadImg img {width: 80px;height: 80px;border:1px solid #e6e6e6;margin-bottom:10px;}
+.hr-deep{margin-left:0;height:3px;border:none;border-top:1px solid #d6d6d6;margin-top:35px;margin-bottom:35px;}
+label{font-size:1.6rem;}
+.am-text-xs {font-size: 1.4rem;}
+.prize-setting-cell{border-bottom:1px dashed #ddd;margin-top:15px;}
+.prize-setting-cell:last-child{border-bottom:0;}
+.lj-mt15{margin-top:15px;}
+.am-text-primary{color:#333}
+.am-form-horizontal .am-form-label{font-weight:600;}
+.lj-contentWrapper .am-text-xs{font-weight:500;}

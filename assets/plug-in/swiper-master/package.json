@@ -1,0 +1,48 @@
+{
+  "name": "amazeui-swiper",
+  "version": "0.0.3",
+  "description": "Amaze UI styled swiper",
+  "main": "lib/amazeui.swiper.js",
+  "style": "dist/amazeui.swiper.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amazeui/swiper.git"
+  },
+  "keywords": [
+    "amazeui-plugin",
+    "amaze-ui",
+    "AMUI",
+    "swiper",
+    "jquery-swiper",
+    "jquery-plugin"
+  ],
+  "author": {
+    "name": "minwe",
+    "email": "minwe@yunshipei.com"
+  },
+  "bugs": {
+    "url": "https://github.com/amazeui/swiper/issues"
+  },
+  "homepage": "https://github.com/amazeui/swiper",
+  "license": "MIT",
+  "devDependencies": {
+    "amazeui-doc-util": "latest",
+    "amazeui-gulp-tasks": "latest",
+    "browserify": "^10.2.4",
+    "browserify-shim": "^3.8.8",
+    "gulp": "^3.9.0",
+    "gulp-load-plugins": "^0.8.0",
+    "run-sequence": "^1.0.2",
+    "amazeui": "^2.4.0"
+  },
+  "dependencies": {
+    "jquery": "^2.1.4",
+    "swiper": "^3.0.8"
+  },
+  "browserify-shim": {
+    "jquery": "global:jQuery"
+  }
+}

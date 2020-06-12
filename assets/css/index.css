@@ -1,0 +1,234 @@
+*{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+
+}
+.header{
+	width:7.1rem;
+	position: fixed;
+	top: 0;
+	height：0.88rem;
+	padding: 0 0.2rem;
+	background:#09b6f2;
+	text-align: center;
+	line-height: 0.88rem;
+	display: flex;
+	z-index:11;
+	align-items:center;
+}
+.Hui-iconfont-close2{
+	font-size: 0.8rem;
+	color: #fff;
+}
+.without{
+	height:1.4rem;
+  	text-align: center;
+  	line-height:0.6rem;
+ 	margin-top: 0.5rem;
+ 	padding-top: 1rem;
+ 	padding-bottom: 1rem;
+ 	padding-left:1.5rem;
+ 	padding-right: 1.5rem;
+ 	font-size: 0.36rem;
+ 	color: #fff;
+}
+.header .left{
+	display:flex;
+	align-items: center;
+	width: 25%;
+	font-size:0.30rem;
+	color: #fff;
+}
+.header .middle{
+	width: 50%;
+	font-size: 0.36rem;
+	color: #fff;
+}
+input{
+	width:0.78rem;
+	height:0.46rem;
+	font-size:0.36rem;
+	text-align:center;
+}
+
+.container{
+	width:100%;
+	height:fit-content;
+	margin-top: 0.88rem;
+	font-size: 0.24rem;
+	color: #fff;
+	background:url(../images/wcup/bottom.jpg) no-repeat 100% 100%;
+	background-size: 100% 100%;
+}
+.time{
+	width:100%;
+	height:6.5rem;
+	
+	background:url(../images/wcup/top_02.jpg) no-repeat 100% 100%;
+	background-size: 100% 100%;
+}
+.time img{
+	width: 1.29rem;
+	height: 1.36rem;
+	position: absolute;
+	top:2rem;
+	left:80%;
+
+}
+.top{
+  background:url(../images/wcup/top.jpg) no-repeat 100% 100%;
+	background-size: 100% 100%;
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
+  text-align: center;
+  height:0.88rem;
+}
+.top p{
+  display: inline-block;
+  font-size: 0.3rem;
+  color: #fff;
+}
+ul{
+  width: 6.6rem;
+  padding:0 0.45rem;
+}
+ul>li{
+  height:2.8rem;
+  margin-top: 0.5rem;
+  padding:0.5rem;
+  background:url(../images/wcup/rectangle.png) no-repeat 100% 100%;
+	background-size: 100% 100%;
+  font-size: 0.36rem;
+  color: #fff;
+}
+ol li{
+  display:flex;
+  align-content:space-around;
+  margin-top: 0.1rem;
+  justify-content: space-around;
+  text-align: center;
+}
+ol li:nth-child(3) label{
+  width: 1rem;
+  height: 0.53rem;
+  line-height: 0.53rem;
+  text-align: center;
+  display:inline-block;
+  border-radius: 0.1rem;
+}
+.active{
+	background: #B5B5B5;
+}
+ul li:nth-child(2) span{
+  display: inline-block;
+  width: 0.77rem;
+  height: 0.46rem;
+  background-color: #fff;
+}
+.middle p:nth-child(2){
+  display: flex;
+  align-items: center;
+}
+.left p , .right p{
+  font-size: 0.3rem;
+}
+.left img{
+	width: 1.02rem;
+	height: 1.06rem;
+}
+.right img{
+	width: 1.02rem;
+	height: 1.06rem;
+}
+.data , .type{
+  border-bottom:0.02rem solid #9D8A75;
+}
+.button {
+  width:3.73rem;
+  height: 1.05rem;
+  background:url(../images/wcup/button.png) no-repeat 100% 100%;
+	background-size: 100% 100%;
+  text-align: center;
+  line-height: 1rem;
+  margin:0.3rem auto;
+
+}
+.button p{
+  font-size:0.34rem;
+  color: #fff;
+  font-weight:bold;
+}
+.pop-up1 , .pop-up2,.pop-up3,.pop-up4 {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	background:rgba(0, 0, 0, 0.5);
+	display: none;
+
+}
+.box{
+	margin-top: 5rem;
+	width: 6.6rem;
+	height: 4.6rem;
+	text-align: center;
+	margin:4rem auto;
+}
+.close{
+	width:100%;
+	text-align: right;
+}
+.close img{
+	width:0.65rem;
+	height: 0.65rem;
+}
+.text{
+	width:80%;
+	padding:0 10%;
+	padding-top:0.6rem;
+	height: 2.45rem;
+	font-size: 0.36rem;
+	background-color: #fff;
+	border-radius: 0.1rem;
+	line-height:1.2rem;
+}
+.text label{
+	display:block;
+	width: 2.36rem;
+	margin:auto;
+	height: 0.7rem;
+	border-radius: 1.2rem;
+	border:0.02rem solid #0066B3;
+	font-size: 0.3rem;		
+	color: #0066B3;
+	line-height: 0.7rem;
+}
+.pop-up2 .text{
+	height: 3.45rem;
+	line-height:2.5rem;
+}
+.pop-up1 .text{
+	height:3rem;
+	line-height:0.6rem;
+	padding-top:1rem;
+}
+.pop-up3 .text ,.pop-up4 .text{
+	line-height:0.6rem;
+	height: 3rem;
+}
+.pop-up4 .text{
+	padding-top:0.9rem;
+}
+
+.pop-up3 .text label , .pop-up4 .text label{
+	margin-top: 0.2rem;
+}
+.on{
+	background:#FF9D2C;
+}

@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'intro-font';
+    src: url('intro.TTF') format('ttf'),
+         url('intro.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

@@ -1,0 +1,150 @@
+<!-- <%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ include file="/jsp/common/pub.jsp"%> -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>幸福生活轻松贷吧</title>
+<meta
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, maximum-scale=1.0, user-scalable=0"
+	name="viewport" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no, email=no" />
+<link rel="stylesheet" href="../assets/css/weui.min.css" />
+<link rel="stylesheet" href="../assets/css/amazeui.swiper.min.css" />
+<link rel="stylesheet" href="../assets/css/common.css" />
+<link rel="stylesheet" href="../assets/css/animate.min.css" />
+<style type="text/css">
+	*{margin: 0;padding: 0;}
+	.container{padding-top:0;}
+	.contain{
+	    background: url(image/back.jpg) no-repeat 100% 100%;margin-top: 10.5%;
+	    background-size: 100% 100%;
+	    width: 100%;
+	    height: 100%;}
+	.rules1,.rules2{width: 96%;margin: .3rem auto;border: 1px solid #fff;border-radius: .2rem;background: #fff;height: 24%;}
+	.rules1{height: 26%;overflow: scroll;}
+	.rules2{overflow: scroll;margin-top: .6rem;}
+	.rules1 h3{
+		margin-left: .2rem;color: #fff;background:#e44513;
+	   font-size: .5rem;
+	   border-radius: .1rem;
+	   width: 3rem;
+	   text-indent: .5rem;
+	}
+	.rules2 h3{margin-left: .2rem;color: #fff;background:#e44513;
+	   font-size: .5rem;
+	   margin-top: .1rem;
+	   border-radius: .1rem;
+	   width: 3rem;
+	   text-indent: .5rem;
+	   margin-bottom: .05rem;}
+	  p{color: #434244;
+	    text-indent: .6rem;
+	    }
+	    .rules2-1{
+	    	width: 90%;
+	    	margin-left: .2rem;
+	    }
+	    .button{
+	    	text-align: center;
+	    	margin-top: .5rem;
+	    }
+	    .button img{width: 5rem;height:1rem;margin: 0 auto;}
+</style>
+</head>
+<body>
+	<div class="container" style="background: #fff;">
+		<div class="titleBar">
+			<div class="titleBar-back" onclick="goHome();">
+				<img src="../assets/images/history.png" />&nbsp;返回
+			</div>
+			<div class="titleBar-text am-text-truncate">活动介绍</div>
+			<!-- <div class="titleBar-close">关闭</div> -->
+		</div>
+	<div class="contain">
+		<div class="rule" style="height: 37%;">
+			
+		</div>
+		<div class="rules1">
+			<h3>活动时间</h3>
+			<p>2019年12月1日-2020年12月31日</p>
+			<h3>活动对象</h3>
+			<p>龙卡贷吧新对象</p>
+			<h3>活动主题</h3>
+			<p>龙卡贷吧首刷有礼</p>
+			<h3>活动内容</h3>
+			<p>活动期间成功申办龙卡贷吧的新客户，使用龙卡贷吧消费三笔且合计满60元，可获得返现30元，总计奖励名额50万名，先到先得，额满截止。</p>
+		</div>
+		<div class="rules2">
+			<div class="rules2-1">
+				<h3>活动细则</h3>
+				<p>1. 龙卡贷吧新客户指目前未持有任何建设银行信用卡，或曾持有但已销户超过6个月，或仅持有建设银行信用卡附属卡的客户。已持有我行信用卡主卡的用户不参与本次新客户返现活动。</p>
+				<p>2. 在活动期间成功申办龙卡贷吧的新客户，使用龙卡贷吧消费三笔且合计满60元，可获得返现30元，总计奖励名额50万名，先到先得，额满截止。奖励名额按照客户符合条件的最后一笔消费交易日期先后排序。如发生退货导致不满足返现条件的，返现金额将扣回。</p>
+				<p>3.返现金额将在用户满足条件后一周内返现至用户贷吧账户，可用于抵扣贷吧消费。</p>
+				<p>4.客户若活动期间有逾期还款、卡片已冻结，或有其他违反中国建设银行龙卡信用卡章程、领用协议或相关业务约定条款情形，建行有权随时取消其参加活动的资格。</p>
+				<p>5.在法律许可范围内，中国建设银行有权修订本活动条款及细则（包括但不限于参加资格、交易时间及奖励方式等）、暂停或取消本活动、并经相关途径（如建行网站、手机银行、微信公众号等）公告后生效。</p>
+			</div>
+		
+		</div>	
+		<div class="button topage"> <img src="image/button.jpg" class="topage"></div>	
+ 		</div>
+ 		
+        </div>
+</div>
+
+	<script src="../assets/js/jquery.min.js"></script>
+	<script src="../assets/js/weui.min.js"></script>
+	<script src="../assets/js/common.js"></script>
+	<script type="text/javascript">
+	function goHome() {
+		window.location.href = "${ctx}/jsp/creditcard/index.jsp";	
+	}
+	$(".topage").click(function(){
+		console.log(1)
+		jumptofunc('05009000','');
+		
+	});
+	/*调用iOS Native方法*/
+    function executeCalliOS(url) {
+        var iframe = document.createElement("IFRAME");
+        iframe.setAttribute("src", url);
+        document.body.appendChild(iframe);
+        iframe.parentNode.removeChild(iframe);
+        iframe = null;
+    }
+	/*iOS跳转功能方法
+	 *func_id为功能ID
+	 *para 为参数，形式如 fund_market=xxxx&fund_name=xxxx&fund_code=xxxx
+	 */
+	function jumpIOS(func_id,para) {
+	    executeCalliOS("innerAppCall://CCBCallCenter?funcid="+func_id+"&"+para);
+	}
+	
+	/*安卓跳转功能方法
+	 *func_id为功能ID
+	 *para 为参数，形式如 fund_market=xxxx&fund_name=xxxx&fund_code=xxxx
+	 */
+	function jumpAndroid(func_id, para) {
+	    mbcjump.startCcbActivity(func_id,para);
+	}
+	
+	/*发起跳转*/
+	function jumptofunc(func_id,para) {
+	    var ua = (navigator.userAgent||navigator.vendor||window.opera).toLowerCase();
+	    var isChromeOrSansung = /chrome|samsung/.test(ua);
+	    var isAndroid = /android|adr/.test(ua) && !(/windows phone/.test(ua));
+	    if(isChromeOrSansung && isAndroid) {
+	    	
+	    	
+	        jumpAndroid(func_id,para);
+	    } else {
+	        jumpIOS(func_id,para);  
+	    }
+	}
+	</script>
+</body>
+</html>

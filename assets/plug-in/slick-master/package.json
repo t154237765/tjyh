@@ -1,0 +1,46 @@
+{
+  "name": "amazeui-slick",
+  "version": "0.0.1",
+  "description": "Amaze UI styled jQuery slick plugin",
+  "main": "dist/slick.min.js",
+  "style": "dist/amazeui.slick.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amazeui/slick.git"
+  },
+  "keywords": [
+    "amazeui-plugin",
+    "amaze-ui",
+    "AMUI",
+    "slick",
+    "jquery-plugin"
+  ],
+  "author": {
+    "name": "minwe",
+    "email": "minwe@yunshipei.com"
+  },
+  "bugs": {
+    "url": "https://github.com/amazeui/slick/issues"
+  },
+  "homepage": "https://github.com/amazeui/slick",
+  "license": "MIT",
+  "devDependencies": {
+    "amazeui-doc-util": "latest",
+    "amazeui-gulp-tasks": "latest",
+    "browserify": "^10.2.4",
+    "browserify-shim": "^3.8.8",
+    "gulp": "^3.9.0",
+    "gulp-load-plugins": "^0.10.0",
+    "run-sequence": "^1.0.2",
+    "slick-carousel": "^1.5.5"
+  },
+  "dependencies": {
+    "amazeui": "^2.4.0"
+  },
+  "browserify-shim": {
+    "jquery": "global:jQuery"
+  }
+}
